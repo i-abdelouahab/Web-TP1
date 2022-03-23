@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renseignement</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>Fiche de Renseignements</header>
+    <div>
+        <form action="recap.php" method="post" enctype="multipart/form-data">
+                <fieldset class="personnel"><legend><h4>Renseignements Personnels</h4></legend>
+            <center><table>
+
+                        <tr><td>Nom :</td><td><input type="text" name="nom" class="personnel-form" required/></td></tr>
+                        <tr><td>Prenom :</td><td><input type="text" name="prenom" class="personnel-form" required/></td></tr>
+                        <tr><td>Age :</td><td><input type="number" name="age" class="personnel-form" required/></td></tr>
+                        <tr><td>Numero de Telephone :</td><td><input type="number" name="numero" class="personnel-form" required/></td></tr>
+                        <tr><td>Email :</td><td><input type="email" name="email" class="personnel-form" required/></td></tr>
+            </table></center>
+        </fieldset>
+        <fieldset class="personnel"><legend><h4>Renseignements Académique</h4></legend>
+            <center><tr><td><center><strong>Vous êtes en :</strong></center></td></tr>
+                <table>
+                        <tr><td><center><label for="cp2">2AP :</label><input type="radio" value="Classes préparatoires" name="filiere" id="cp2" required>|<label for="gstr">GSTR :</label><input type="radio" value="GSTR" name="filiere" id="gstr" required>|<label for="gi">GI :</label><input type="radio" value="GI" name="filiere" id="gi" required>|<label for="scm">SCM :</label><input type="radio" value="SCM" name="filiere" id="scm" required>|<label for="gc">GC :</label><input type="radio" value="GC" name="filiere" id="gc" required>|<label for="gm">GM :</label><input type="radio" value="GM" name="filiere" id="gm" required></center></td></tr>
+                        <tr><td><center><label for="prem-an">1er année :</label><input type="radio" value="1ère année" name="level" id="prem-an" required>|<label for="deux-an"> 2eme année :</label><input type="radio" value="2ème année" name="level" id="deux-an" required>|<label for="trois-an"> 3eme année :</label><input type="radio" value="3ème année" name="level" id="trois-an" required></center></td></tr>
+                        <tr><td><center><strong>Modules suivies cette année :</strong></center></td></tr>
+                        <tr><td><label for="prog">Pro Av :</label><input type="checkbox" value="Pro Av" name="modules[]" id="prog">|<label for="compilation"> Compilation :</label><input type="checkbox" value="Compilation" name="modules[]" id="compilation">|<label for="reseaux"> Réseaux Av :</label><input type="checkbox" value="Réseaux Av" name="modules[]" id="reseaux">|<label for="web"> Web Avancée :</label><input type="checkbox" value="Web Avancée" name="modules[]" id="web">|<label for="poo">POO :</label><input type="checkbox" value="POO" name="modules[]" id="poo">|<label for="bd">BD :</label><input type="checkbox" value="BD" name="modules[]" id="bd"></td></tr>
+                        <tr><td><center><strong>Quels clubs avez-vous intégrer ? :</strong></center></td></tr>
+                        <tr><td>InfoTech :<input type="checkbox" value="Infotech" name="clubs[]">| CETEC :<input type="checkbox" value="CETEC" name="clubs[]">| Rotaract :<input type="checkbox" value="Rotaract" name="clubs[]" >| AFI :<input type="checkbox" value="AFI" name="clubs[]">| Wirened :<input type="checkbox" value="Wirened" name="clubs[]">| Masjid :<input type="checkbox" value="Masjid" name="clubs[]">| Aucun:<input type="checkbox" value="Aucun" name="clubs[]"></td></tr>
+                        <tr><td><center><strong><label for="projet">Nombre de projets réalisés cette année :</label></strong><select name="nb_projet" id="projet" required>
+                            <option value=""></option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select></center></td></tr>
+                    </table></center>
+        </fieldset>
+        <fieldset class="personnel"><legend><h4>Vos remarques</h4></legend>
+            <center><table>
+                        <tr><td><textarea name="remarque" id="remarque" cols="40" rows="4"></textarea></td></tr>
+                        <tr><td><input type="file" name="image" id="btn"></td></tr>
+            </table>
+        </center>
+        </fieldset>
+       <br> <center><input type="submit" name="envoyer" value="Envoyer" id="btn">&nbsp;&nbsp;&nbsp;<input type="reset" name="annuler" value="Annuler" id="btn"></center>
+        </form>
+    </div>
+</body>
+</html>
